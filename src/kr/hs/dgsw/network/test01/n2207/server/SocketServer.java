@@ -139,9 +139,7 @@ public class SocketServer {
             sendData(list.getBytes("UTF-8"), socket);
             fileInt++;
         }
-        String fileNum = "** " + fileInt + "개 파일 **";
 
-        sendData(fileNum.getBytes("UTF-8"),socket);
     }
 
     public String getSize(long bytes) {

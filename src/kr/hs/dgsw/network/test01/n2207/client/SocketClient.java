@@ -122,11 +122,14 @@ public class SocketClient{
             int fileInt = Integer.parseInt(fileCnt[0]);
 
             int cnt = 0;
-            while (cnt < fileInt) {
+            while (cnt < fileInt - 1) {
                 String msg = receive(socket);
                 System.out.println(msg);
                 cnt++;
             }
+            cnt++;
+            String fileNum = "** " + fileInt + "개 파일 **";
+            System.out.println(fileNum);
         }catch (Exception e){
             e.printStackTrace();
             return;
